@@ -21,14 +21,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from avicii device
 $(call inherit-product, device/oneplus/avicii/device.mk)
 
-# Inherit some common Nameless stuff.
+# Inherit some common PEX stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Nameless Properties
+# PEX Properties
 TARGET_USES_AOSP_RECOVERY := true
 
 # Offical Bruh
-CUSTOM_BUILD_TYPE := Official
+PEX_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_QUICK_TAP := true
+EXTRA_UDFPS_ANIMATIONS := true
 
 PRODUCT_NAME := aosp_avicii
 PRODUCT_DEVICE := avicii
